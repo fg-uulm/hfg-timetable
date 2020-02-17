@@ -4,6 +4,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {
+    setInterval(() => {
+      location.reload();
+    }, 60000)
+  }
+}
+</script>
+
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

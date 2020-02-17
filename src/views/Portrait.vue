@@ -33,10 +33,10 @@ export default {
       hours: 24,
       strippos: 0,
       talks: [
-        {day: "14", hour: 12, min: 30, duration: 0.75, speaker: "Bianca Koch", topic: "Was ist IoT?"},
-        {day: "14", hour: 14, min: 0, duration: 0.75, speaker: "Prof. Hartmut Bohnacker", topic: "Creative Coding"},
-        {day: "14", hour: 15, min: 30, duration: 0.75, speaker: "Ludwig Kannicht", topic: "Das Neue zähmen.<br/> Wie Gestalter arbeiten."},
-        {day: "14", hour: 17, min: 0, duration: 0.75, speaker: "Florian Geiselhart", topic: "Secure by Design.<br/> Sicherheit im IoT"},
+        {day: "14", hour: 12, min: 0, duration: 0.75, speaker: "Florian Geiselhart", topic: "Secure by Design.<br/> Sicherheit im IoT"},
+        {day: "14", hour: 13, min: 0, duration: 0.75, speaker: "Bianca Koch", topic: "Was ist IoT?"},
+        {day: "14", hour: 14, min: 0, duration: 0.75, speaker: "Vanessa Stöckel, Jana Seemann", topic: "Rückblick auf das IoT-Studium"},
+        {day: "14", hour: 15, min: 0, duration: 0.75, speaker: "IoT BA-Absolventen", topic: "Bachelorarbeiten-Kurzpräsentation"},        
       ]
     };
   },
@@ -110,7 +110,7 @@ export default {
   .talkstrip {
     position: absolute;
     width: 60vw;
-    background-color: #030099;
+    background-color: rgb(40, 53, 131);
     color:white;
   }
 

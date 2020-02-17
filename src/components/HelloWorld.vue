@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="talks" :style="{top: strippos+'px'}">
-        <div v-for="talk in talks" v-bind:key="talk.hour" class="talkstrip" :style="{height:talk.duration*200+'px', top:(talk.hour*200)+(talk.min*(100/60)/100*200)+'px'}">
+        <div v-for="talk in talks" v-bind:key="talk.hour" class="talkstrip" :style="{height:talk.duration*160+'px', top:(talk.hour*160)+(talk.min*(100/60)/100*160)+'px'}">
           <div class="topic" v-html="talk.topic"></div>
           <div class="speaker">{{talk.speaker}}</div>
         </div>
@@ -27,10 +27,10 @@ export default {
       hours: 24,
       strippos: 0,
       talks: [
-        {day: "14", hour: 12, min: 30, duration: 0.75, speaker: "Bianca Koch", topic: "Was ist IoT?"},
-        {day: "14", hour: 14, min: 0, duration: 0.75, speaker: "Prof. Hartmut Bohnacker", topic: "Creative Coding"},
-        {day: "14", hour: 15, min: 30, duration: 0.75, speaker: "Ludwig Kannicht", topic: "Das Neue zähmen.<br/> Wie Gestalter arbeiten."},
-        {day: "14", hour: 17, min: 0, duration: 0.75, speaker: "Florian Geiselhart", topic: "Secure by Design.<br/> Sicherheit im IoT"},
+        {day: "14", hour: 12, min: 0, duration: 0.75, speaker: "Florian Geiselhart", topic: "Secure by Design.<br/> Sicherheit im IoT"},
+        {day: "14", hour: 13, min: 0, duration: 0.75, speaker: "Bianca Koch", topic: "Was ist IoT?"},
+        {day: "14", hour: 14, min: 0, duration: 0.75, speaker: "Vanessa Stöckel, Jana Seemann", topic: "Rückblick auf das IoT-Studium"},
+        {day: "14", hour: 15, min: 0, duration: 0.75, speaker: "IoT BA-Absolventen", topic: "Bachelorarbeiten-Kurzpräsentation"},        
       ]
     };
   },
@@ -38,7 +38,7 @@ export default {
     setInterval(() => {
       const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       const now = new Date();
-      this.strippos = ((vh/2)+20) - (now.getHours() * 200) - (now.getMinutes()*(100/60)/100*200);
+      this.strippos = ((vh/2)+20) - (now.getHours() * 160) - (now.getMinutes()*(100/60)/100*160);
     }, 100);
   }
 }
@@ -69,7 +69,7 @@ export default {
     background-position: bottom;
     background-size: 3px 1px;
     background-repeat: repeat-x;
-    height:200px;
+    height:160px;
     width:43vw;
   }
 
